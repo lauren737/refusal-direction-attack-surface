@@ -2,7 +2,7 @@
 
 A visual walkthrough of where a language model's refusal behavior lives, plus the argument for why that matters once AI systems can edit their own weights.
 
-**▶ Interactive walkthrough: https://rayonx-research.web.app**
+**▶ Interactive walkthrough: https://refusal-direction.web.app**
 
 ![Average of harmful − average of harmless = the refusal direction](figures/grids/refusal-direction.png)
 
@@ -16,7 +16,7 @@ On its own, that is not much of an enterprise threat: attackers rarely get to ed
 |---|---|
 | **Recursive self-improvement (RSI)** | *Permission*: pipelines that let an agent observe, evaluate, choose, and update its own weights |
 | **Weight-space programming** ([Takehi et al., 2026](https://rikiyat.github.io/blog/weight-space-programming)) | *Precision*: a large model can make small, targeted weight edits with no training run |
-| **Adversarial ML** | *Direction*: poisoned inputs or nudged choices steer what the agent decides to change |
+| **Adversarial ML** | *Intent*: poisoned inputs or nudged choices steer what the agent decides to change |
 
 [Irregular (2026)](https://www.irregular.com/research/agentic-self-modification-in-open-weights-systems) already showed a coding agent retraining and redeploying its own model without being told to, and in one experiment that retraining removed a learned refusal. It happens by accident today. An attacker can make it happen on purpose.
 
@@ -38,7 +38,7 @@ Method, in one line: record the activations for matched harmless and harmful req
 
 | Path | Contents |
 |---|---|
-| `visualization/index.html` | Interactive step-by-step walkthrough, also live at https://rayonx-research.web.app |
+| `visualization/index.html` | Interactive step-by-step walkthrough, also live at https://refusal-direction.web.app |
 | `figures/grids/` | The activation grids used in the figures (five harmless, five harmful, the two averages, and the direction) |
 | `post/post.md` | The accompanying post |
 | `REFERENCES.md` | Every paper and source the work builds on |
